@@ -1,0 +1,16 @@
+{
+  "name": "config-templates",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Specifyapp/config-templates.git",
+  "author": "Allan Michay <allan.michay@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "extract-css": "yarn specify -C to-css/extract.js pull",
+    "extract-css-json": "yarn specify -C to-css/extract.json pull"
+  },
+  "dependencies": {
+    "@specifyapp/cli": "^1.2.0",
+    "dotenv": "^16.4.5"
+  }
+}

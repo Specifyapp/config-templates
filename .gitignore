@@ -1,0 +1,11 @@
+# Global
+.env
+
+# JS
+node_modules
+
+# Other
+.DS_STORE
+.history
+.idea
+.vscode

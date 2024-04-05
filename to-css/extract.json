@@ -1,0 +1,310 @@
+{
+  "version": "2",
+  "personalAccessToken": "<SPECIFY_PERSONAL_ACCESS_TOKEN>",
+  "repository": "<SPECIFY_ORGANIZATION_NAME>/<SPECIFY_REPOSITORY_NAME>",
+  "rules": [
+    {
+      "name": "CSS / Colors",
+      "parsers": [
+        {
+          "name": "filter",
+          "options": {
+            "query": {
+              "where": {
+                "collection": "^Colors$",
+                "select": {
+                  "children": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "names",
+            "toCase": "kebabCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "modes",
+            "toCase": "kebabCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "to-css-custom-properties",
+          "output": {
+            "type": "file",
+            "filePath": "to-css/outputs/colors.css"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CSS / Gradients",
+      "parsers": [
+        {
+          "name": "filter",
+          "options": {
+            "query": {
+              "where": {
+                "group": "^Color styles$",
+                "select": {
+                  "children": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "names",
+            "toCase": "kebabCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "modes",
+            "toCase": "kebabCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "to-css-custom-properties",
+          "output": {
+            "type": "file",
+            "filePath": "to-css/outputs/gradients.css"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CSS / Shadows",
+      "parsers": [
+        {
+          "name": "filter",
+          "options": {
+            "query": {
+              "where": {
+                "group": "^Effect styles$",
+                "select": {
+                  "children": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "names",
+            "toCase": "kebabCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "modes",
+            "toCase": "kebabCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "to-css-custom-properties",
+          "output": {
+            "type": "file",
+            "filePath": "to-css/outputs/shadows.css"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CSS / Text Styles",
+      "parsers": [
+        {
+          "name": "filter",
+          "options": {
+            "query": {
+              "where": {
+                "group": "^Text styles$",
+                "select": {
+                  "children": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "names",
+            "toCase": "kebabCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "modes",
+            "toCase": "kebabCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "to-css-text-style",
+          "options": {
+            "genericFamily": "sans-serif"
+          },
+          "output": {
+            "type": "file",
+            "filePath": "to-css/outputs/text-styles.css"
+          }
+        }
+      ]
+    }
+  ]
+}

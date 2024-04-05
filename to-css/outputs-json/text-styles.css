@@ -1,0 +1,20 @@
+.text-styles-body-l {
+	font-family: Inter, sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+}
+.text-styles-body-m {
+	font-family: Inter, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+}
+.text-styles-body-s {
+	font-family: Inter, sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+}
+.text-styles-header {
+	font-family: Montserrat, sans-serif;
+	font-size: 40px;
+	font-weight: 600;
+}
