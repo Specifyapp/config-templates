@@ -1,0 +1,92 @@
+{
+  "version": "2",
+  "personalAccessToken": "<SPECIFY_PERSONAL_ACCESS_TOKEN>",
+  "repository": "<SPECIFY_ORGANIZATION_NAME>/<SPECIFY_REPOSITORY_NAME>",
+  "rules": [
+    {
+      "name": "SVG / Optimized Icons",
+      "parsers": [
+        {
+          "name": "filter",
+          "options": {
+            "query": {
+              "where": {
+                "group": "^Vectors$",
+                "select": {
+                  "children": true,
+                  "group": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "names",
+            "toCase": "kebabCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "modes",
+            "toCase": "kebabCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "svgo",
+          "options": {
+            "svgo": {
+              "plugins": [
+                {
+                  "name": "removeDimensions"
+                }
+              ]
+            }
+          },
+          "output": {
+            "type": "directory",
+            "directoryPath": "to-svg-icons/outputs-json/"
+          }
+        }
+      ]
+    }
+  ]
+}

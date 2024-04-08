@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "extract-css": "yarn specify -C to-css/extract.js pull",
-    "extract-css-json": "yarn specify -C to-css/extract.json pull"
+    "extract-css-json": "yarn specify -C to-css/extract.json pull",
+    "extract-svg-icons": "yarn specify -C to-svg-icons/extract.js pull",
+    "extract-svg-icons-json": "yarn specify -C to-svg-icons/extract.json pull"
   },
   "dependencies": {
     "@specifyapp/cli": "^1.2.0",
