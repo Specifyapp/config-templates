@@ -26,3 +26,5 @@ For the JS version, you need to fill the .env file with the required fields. For
 - `yarn extract-css-json` | `npm run extract-css-json` | `pnpm run extract-css-json` - Extract all tokens in CSS files. You can check the code and output in the folder `to-css`
 - `yarn extract-svg-icons` | `npm run extract-svg-icons` | `pnpm run extract-svg-icons` - Extract and optimize all svg tokens from a repository. You can check the code and output in the folder `to-svg-icons`
 - `yarn extract-svg-icons-json` | `npm run extract-svg-icons-json` | `pnpm run extract-svg-icons-json` - Extract and optimize all svg tokens from a repository. You can check the code and output in the folder `to-svg-icons`
+- `yarn extract-react-native` | `npm run extract-react-native` | `pnpm run extract-react-native` - Extract all tokens to a typescript in the react native usable format. You can check the code and output in the folder `to-react-native`
+- `yarn extract-react-native-json` | `npm run extract-react-native-json` | `pnpm run extract-react-native-json` - Extract all tokens to a typescript in the react native usable format. You can check the code and output in the folder `to-react-native`

@@ -1,0 +1,72 @@
+{
+  "version": "2",
+  "personalAccessToken": "<SPECIFY_PERSONAL_ACCESS_TOKEN>",
+  "repository": "<SPECIFY_ORGANIZATION_NAME>/<SPECIFY_REPOSITORY_NAME>",
+  "rules": [
+    {
+      "name": "React Native / Colors",
+      "parsers": [
+        {
+          "name": "change-case",
+          "options": {
+            "change": "names",
+            "toCase": "camelCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "change-case",
+          "options": {
+            "change": "modes",
+            "toCase": "camelCase",
+            "applyTo": {
+              "where": [
+                {
+                  "collection": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                },
+                {
+                  "group": ".*",
+                  "select": {
+                    "parents": true,
+                    "children": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "to-react-native",
+          "output": {
+            "type": "file",
+            "filePath": "to-react-native/outputs-json/theme.ts"
+          },
+          "options": {
+            "typescript": true
+          }
+        }
+      ]
+    }
+  ]
+}
